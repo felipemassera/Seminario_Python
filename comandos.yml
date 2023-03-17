@@ -1,0 +1,40 @@
+pwd - nos da donde estamos parados
+ls - nos dice que archivos hay en la carpeta
+touch nombre.extension  -  crea un archivos
+rm - r  nombre  - borra un archivo
+
+cd - cambia de directorio   ej cd clase - nos myeve a la carpeta de la clase. 
+clear - borra la pantalla
+
+cd .. -vuelve para atras en una carpeta
+
+COMO CREAR LA CARPETA
+mkdir python 
+cd python (nos mueve a la carpeta),     - cd .. vuelve para atras    ----   se puede hacer un CD clase/python   y nos mueve dos carpetas de una.
+code .  nos abre el VS CODE en la carpeta creada. 
+
+cat nombre de archivo -- nos deja ver la ejecucion del archivo en la terminal bash.
+python nombredelarchivo  - ejecuta el programa python en la terminal. git
+
+
+ls -a   nos muestra archivos ocultas en un directorio
+git init  - nos inicia la carpeta para poder cargarla en el servidor git
+git status - nos dice que archivos tenemos para actualizar o cargar en el servidorGit
+git add nombredearchivo -nos deja agregar al repositorio git
+git add .   agrega todos los achivos no cargados.
+git restore  -> nos saca el trackin del archivo
+
+git commit -m "creo el archivo app"  -> nos carga en git lo que previamente hicimos el git ADD
+git log -podemos ver todos los commit que hicimos en esa rama a lo largo del tiempo. 
+si eliminamos la carpeta .git (oculta) nos borra la base de dato de lo que veniamos haciendo
+
+para cargarlo en el servidor debemos hacer:
+creamos el repositorio en nun servidor y subimos el codigo (ej en github). y creamos el repositorio. segimos las explicaciones pero ver Lo de SSHH
+git branch -m main
+git remote....
+git push -u origin main (es para que cuando agegamos todos los commits de nuestra compu  repositorio al )
+
+
+
+ls ~/.shh nos deja ver el directorio donde se crea la clave SSH. para dejarnos laburar con los archivos. 
+
