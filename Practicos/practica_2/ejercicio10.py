@@ -1,3 +1,4 @@
+import time
 def armar_zip(nombres,notas_1,notas_2):
     return{i:[j,k] for i,j,k in zip(nombres,notas_1,notas_2)}
     
@@ -12,6 +13,22 @@ def prom_total(promedios):
     return (sum(promedios)/len(promedios))
 
 
+def max_prom(promedios):
+    return promedios.index(max(promedios))
+
+#def min_nota(nota1,nota2):
+#    min1=min(nota1)
+#    min2=min(nota2)
+#    if(min1<min2):
+#        return nota1.index(min1)
+#    else:
+#        return nota2.index(min2)
+#
+def min_nota(nota1,nota2):
+    if(min(nota1)<min(nota2)):
+        return nota1.index(min(nota1))
+    return nota2.index(min(nota2))
+    
 
 
 nombres = ['Agustin', 'Alan', 'Andrés', 'Ariadna', 'Bautista', 'CAROLINA', 'CESAR', 
@@ -27,15 +44,28 @@ notas_1 = [81,  60, 72, 24, 15, 91, 12, 70, 29, 42, 16, 3, 35, 67, 10, 57, 11, 6
 notas_2 = [30, 95, 28, 84, 84, 43, 66, 51, 4, 11, 58, 10, 13, 34, 96, 71, 86, 37,
            64, 13, 8, 87, 14, 14, 49, 27, 55, 69, 77, 59, 57, 40, 96, 24, 30, 73,
            95, 19, 47, 15, 31, 39, 15, 74, 33, 57, 10]
+"""evaluamos tiempo de ejecucion"""
+start_time = time.time() 
+
 #inciso 1
 diccio= armar_zip(nombres,notas_1,notas_2)
 
 #inciso 2
 promedios=sacar_promedios(diccio)
-#print (promedios)
+#print(promedios)
 
 #inciso 3
 promedio_curso= prom_total(promedios)
-print (f"El promedio total del curso: {promedio_curso}")
+#print (f"El promedio total del curso: {promedio_curso}")
+
+#inciso 4
+print(f"Alumno con la nota promedio mas alta: {nombres[max_prom(promedios)]}")
 
 
+#inciso 5
+print(f"Alumno con la nota mas baja: {nombres[min_nota(notas_1,notas_2)]}")
+
+#aca termina de medir y calcular el tiempo de ejecucion
+end_time = time.time()   
+elapsed_time = end_time - start_time
+print(f"Tiempo de ejecución: {elapsed_time} segundos")
