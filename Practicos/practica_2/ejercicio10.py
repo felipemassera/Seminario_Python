@@ -1,27 +1,36 @@
 import time
 
 def String_a_List(nombres):
-    """ Recibo un string de nombres y lo transformo en un listado de los mismos"""
+    """ Recibo un string con nombres y lo transformo en una lista  con los mismos nombres"""
     nombres = nombres.replace("\n", "")
     nombres = nombres.replace(" ", "")
     nombres = nombres.replace("'", "")
     return nombres.split(',')
 
 def armar_zip(nombres,notas_1,notas_2):
-    """ Recibo 3 listas, las cuales las uno para formar un"""
-    return{i:[j,k] for i,j,k in zip(nombres,notas_1,notas_2)}
+    """ Recibo 3 listas, las cuales se realiza un procedimiento de merge para generar un diccionario
+    cuya clave = nombre y valor= una tupla con notas [nota2,nota2] """
+    return{i:(j,k) for i,j,k in zip(nombres,notas_1,notas_2)}
     
 def sacar_promedios(diccio):
+    """ Recibo un diccionario con nombres y 2 valores por y calculo el promedio por alumno,
+    retornando el promedio general del alumno"""
     return map(lambda clave:sum(diccio[clave])/2,diccio)
        
 def prom_total(promedios):
+    """ Recibo un diccionario con nombres y 2 valores por cada entrada,
+    retornando el promedio general del curso (numero  flotante) """
     return (sum(promedios.values())/len(promedios))
 
 def max_prom(promedios):
+    """Recibe un diccionario cuyas claves = nombres y sus valores = promedio del alumno,
+    retornando el promedio maximo"""
     return max(promedios,key=promedios.get)
 
 def min_nota(diccio):
-    return min(diccio,key=diccio.get)   
+    """Recibe un diccionario cuyas claves = nombres y sus valores = [nota1,nota2],
+    retornando la clave (nombre) de la persona que tenga la menor nota entre las dos listas (nota1 y nota2)"""
+    return min(diccio,key=lambda x:min(diccio[x]))   
 
 nombres = ''' 'Agustin', 'Alan', 'Andrés', 'Ariadna', 'Bautista', 'CAROLINA', 'CESAR', 
 'David','Diego', 'Dolores', 'DYLAN', 'ELIANA', 'Emanuel', 'Fabián', 'Facundo', 
