@@ -2,9 +2,7 @@ import time
 
 def String_a_List(nombres):
     """ Recibo un string con nombres y lo transformo en una lista  con los mismos nombres"""
-    nombres = nombres.replace("\n", "")
-    nombres = nombres.replace(" ", "")
-    nombres = nombres.replace("'", "")
+    nombres = nombres.replace("\n", "").replace(" ", "").replace("'", "")
     return nombres.split(',')
 
 def armar_zip(nombres,notas_1,notas_2):
