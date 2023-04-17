@@ -47,5 +47,7 @@ If you are new to contributing to open source, this guide helps explain why, wha
 
 lines = text.lower().split()
 var= Counter(lines)
+print()
+print('averga',var)
 print(f"the word most common in the text is {var.most_common(1)}")
 
