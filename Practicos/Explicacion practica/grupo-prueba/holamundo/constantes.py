@@ -1,0 +1,1 @@
+SALUDO = "¡Hola mundo!"
