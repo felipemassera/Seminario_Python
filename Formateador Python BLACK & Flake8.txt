@@ -1,0 +1,35 @@
+
+FLAKE8 (Extension VSC): Es un analizador de codigo que nos mostrara errores de codigo y formato basandose en la 
+			PEP8, sin embargo no es automatico, nos mostrara aquellas lineas que debemos modificar.
+
+
+Black (Repo pyton): Se instala con "pip install black". Es un auto formateador que se usa
+		por terminal, para ello : 
+
+	Comprobando archivos para formatear:
+		- black --check .: Esto comprobará qué archivos Python pueden formatearse en la carpeta actual (pero en realidad no modifica el archivo Python).
+	
+	Mostrar cambios sugeridos en un determinado archivo:
+		- black --check --diff file_name.py : Esto muestra lo que hay que hacer con el archivo, pero no lo modifica.	
+
+	Formatear Uno o múltiples archivos: 
+		- black sample_code.py : nos formatea UN archivo py que querramos.
+		- black folder_name/ : nos formatea todos los archivos contenidos en un directorio
+
+	Cambiar número de caracteres por línea (el valor predeterminado de Black es de 88 caracteres):
+		- black -l 60 python_file.py : cambiar el formato de linea max a 60 caracteres. 
+
+
+Instalar Jupyter Black: 
+	1- Primero asegúrese de haber instalado jupyter-contrib-nbextensions: 
+		"jupyter nbextension install https://github.com/drillan/jupyter-black/archive/master.zip — user"
+	2-A continuación, habilite la extensión ejecutando:
+		"jupyter nbextension enable jupyter-black-master/jupyter-black"
+	3-Ahora puedes empezar a formatear tu código Python en cada celda de tu cuaderno.
+	En primer lugar, seleccione la celda del cuaderno que desea formatear su código Python y haga clic en el botón de extensión llamado Black.
+
+
+Integrar Al IDE Editor:
+	Puedes integrar Black con tus editores favoritos. Actualmente, Black soporta Emacs, PyCharm/IntelliJ IDEA, Wing IDE, Vim, Gedit,
+	Visual Studio Code, Sublime Text 3, Python LSP Server, Atom/Nuclide, Gradle (the build tool), Kakoune y Thonny.
+	Siga las instrucciones "https://black.readthedocs.io/en/stable/integrations/editors.html" para integrar Black con su editor favorito.

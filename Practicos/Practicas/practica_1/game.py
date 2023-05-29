@@ -1,10 +1,11 @@
 from random import choice, randrange
 from datetime import datetime
-#variable contadora de aciertos
-aciertos=0
-print(f"aciertos {aciertos}")                
+
+# variable contadora de aciertos
+aciertos = 0
+print(f"aciertos {aciertos}")
 # Operadores posibles
-operators = ["+", "-","/","*"]
+operators = ["+", "-", "/", "*"]
 # Cantidad de cuentas a resolver
 times = 5
 # Contador inicial de tiempo.
@@ -19,40 +20,42 @@ for i in range(0, times):
     # Se imprime la cuenta.
     print(f"{i+1}- ¿Cuánto es {number_1} {operator} {number_2}?")
     # Le pedimos al usuario el resultado
-    if((operator != "/") or (number_2!=0)):
+    if (operator != "/") or (number_2 != 0):
         result = int(input("resultado: "))
         match operator:
             case "+":
-                if ( (number_1 + number_2) == result):
+                if (number_1 + number_2) == result:
                     print("Respuesta correcta")
                     aciertos += 1
                 else:
                     print("respuesta incorrecta")
-            case "-": 
-                if (result == (number_1 - number_2)):
+            case "-":
+                if result == (number_1 - number_2):
                     print("Respuesta correcta")
                     aciertos += 1
                 else:
                     print("respuesta incorrecta")
             case "/":
-                    if (result == round(number_1 // number_2)):
-                        print("Respuesta correcta")
-                        aciertos += 1
-                    else:
-                        print("respuesta incorrecta")
-            case "*": 
-                if (result == number_1 * number_2):
+                if result == round(number_1 // number_2):
                     print("Respuesta correcta")
                     aciertos += 1
                 else:
-                    print("respuesta incorrecta")                
+                    print("respuesta incorrecta")
+            case "*":
+                if result == number_1 * number_2:
+                    print("Respuesta correcta")
+                    aciertos += 1
+                else:
+                    print("respuesta incorrecta")
     else:
         print("no se puede dividir por 0")
-        aciertos +=1
+        aciertos += 1
 # Al terminar toda la cantidad de cuentas por resolver.
 # Se vuelve a tomar la fecha y la hora.
 end_time = datetime.now()
 # Restando las fechas obtenemos el tiempo transcurrido.
 total_time = end_time - init_time
 # Mostramos ese tiempo en segundos.
-print(f"\n Tardaste {total_time.seconds} segundos. tuviste {aciertos} respuestas correctas.")
+print(
+    f"\n Tardaste {total_time.seconds} segundos. tuviste {aciertos} respuestas correctas."
+)
