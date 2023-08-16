@@ -1,0 +1,123 @@
+\documentclass[12pt]{article}
+
+\usepackage{report}
+
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage[colorlinks=true, linkcolor=black, citecolor=blue, urlcolor=blue]{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{lipsum}		% Can be removed after putting your text content
+\usepackage{graphicx}
+\usepackage{natbib}
+\usepackage{doi}
+\setcitestyle{aysep={,}}
+
+
+
+\title{Informe Seminario de Lenguajes: Python 2023}
+
+\author{Massera Felipe Carlos\\
+\AND
+Numero de Legajo: 20767/5\\
+\AND
+\AND
+\AND
+\AND
+\AND
+\AND
+	Universidad Nacional de La Plata UNLP\\
+}
+
+% Uncomment to remove the date
+\date{Julio 2023}
+
+% Uncomment to override  the `A preprint' in the header
+\renewcommand{\headeright}{UNLP Image}
+\renewcommand{\undertitle}{UNLP Image}
+\renewcommand{\shorttitle}{}
+
+
+\begin{document}
+\maketitle
+
+\newpage
+\tableofcontents
+\thispagestyle{empty}
+
+\newpage
+\thispagestyle{empty}
+\setcounter{page}{1}
+\section{Introducción}
+Durante la cursada de la materia Seminario de lenguajes: Python 2023, se realizó un trabajo practico grupal [1], cuyo objetivo constaba en la creación de un programa que pueda etiquetar imágenes, generar collage y crear memes aplicando las herramientas del lenguaje Python vistos durante la cursada. Dicho programa será el analizado durante éste informe.
+
+
+\section{Análisis de Accesibilidad}
+El siguiente informe analizará el programa UNLPimage, en donde se realizarán pruebas de agudeza visual para daltónicos y de accesibilidad del mismo para personas con discapacidades cognitivas.
+
+\subsection{Accesibilidad Visual:}
+Las personas con daltonismo son aquellas que perciben los colores con cierta distorsión en relación de la mayoría de la población; siendo una minoría afectada por quienes no tienen en cuenta la funcionalidad de los softwares y aplicaciones a la hora de ser desarrollados.
+Para poder analizar la aplicación creada durante el transcurso de la materia, debemos entender que el daltonismo es una disfunción de la visión, en donde la persona percibe de manera alterada los colores; existen diferentes tipos de daltonismo clasificándose de la siguiente manera:
+Deuteranopía: Alteración de la visión al color rojo. Puede ser total o parcial.
+Protanopía: Alteración de la visión al color verde. Puede ser total o parcial.
+Tritanopía: Alteración de la visión al color azul. Puede ser total o parcial.
+Acromatopsia: Ceguera al color.
+Teniendo en cuenta que el daltonismo es percibir los colores de manera alterada y que existen diferentes clasificaciones del mismo según esas percepciones, estructuramos el primer análisis de accesibilidad de la siguiente manera a través de la accesibilidad de agudeza visual: Se evaluará, a través de una página web y una aplicación de pc, la paleta de colores utilizada en la interfaz gráfica del programa, el uso de las fuentes tipográficas y el contraste visual entre la figura y el fondo con la finalidad de verificar su accesibilidad y percepción colorimétrica para personas con daltonismo.
+
+	Herramientas utilizadas:
+
+Para realizar las pruebas en la aplicación en relación a la accesibilidad de agudeza visual se utilizaron los siguientes softwares de uso libre:
+
+
+https://asada.website/webCVS/index.html. 	
+
+Esta herramienta posibilita visualizar una imagen, en este caso capturas de pantalla de la ejecución de nuestro programa, con diferentes espectros de color para las diferentes deficiencias visuales: Protanopia, Deuteranopia y Tritanopia. 
+
+https://www.tpgi.com/color-contrast-checker/. 	
+
+Esta herramienta evalúa el contraste del programa creado y así determinar si cumple con los estándares de accesibilidad.	
+
+\subsection{Accesibilidad para personas con discapacidades cognitivas:}
+
+En cuanto a la accesibilidad para personas con discapacidades cognitivas, el análisis parte desde la comprensión del amplio espectro que este tipo de accesibilidad refiere en cuanto a todas las interfaces de la aplicación creada. Por ello, en este análisis se tiene en cuenta: la lectoescritura del usuario, su capacidad de comprensión, el procesamiento de la información comprendida y la capacidad de resolver de manera independiente cualquier problemática relacionada con la memoria, la atención y el pensamiento visual a lo largo del proceso de uso de la aplicación creada.
+	Se realizará una autoevaluación de la aplicación creada a partir de un análisis de las buenas prácticas para el desarrollo de softwares, aplicaciones y páginas web; tales como el desarrollo tecnológico, los textos, el diseño, carteles, pictograma y su ubicación en los mismos; así también como la ubicación de los elementos en cada interfaz, evaluando la claridad y sencillez del lenguaje en cada una de ellas.
+
+\section{Conclusiones}
+\label{sec:others}
+
+\subsection{Accesibilidad Visual:}
+Para realizarse las pruebas con la herramienta CVS[2], debieron previamente tomarse capturas de pantalla de la ejecución de las distintas interfaces que componen al programa UNLPimage. Esta herramienta modifica el aspecto visual de las capturas de pantalla al cambiarle la colorimetria que la componen, simulando en cada una de ellas, una deficiencia visual sobre la captación de color: daltonismo. Esta herramienta nos da como resultado la imagen original y tres imágenes con sus modificaciones de colores: dentro del espectro de protanopia, deuteranopia, tritanopia. Como se muestra en la Figura 1.
+
+\begin{figure}
+    \centering
+    \includegraphics{figs/MainReducida.jpg}
+    \caption{Main}
+    \label{fig:main}
+\end{figure}
+
+Al momento de analizar las resultantes visuales de las imágenes obtenidas del CVS, se detectó que las mismas en sus diferentes variaciones visuales, tienen el suficiente contraste en relación a la figura-fondo (texto e iconos en relación al fondo). De esta manera se denota que la paleta de colores elegida no es una problemática para el uso del programa, pudiéndose observar nítidamente todos los elementos que componen a la interfaz.
+	Una vez realizadas las pruebas desde el CVS, se prosiguió a realizar las pruebas con el programa CCA [3], el cual marca los diferentes estándares de colores y contrastes en cada interfaz. Dicho programa muestra que la elección del color de fondo en contraste con los botones de la interfaz gráfica de la aplicación UNLPimagen no contienen el suficiente contraste para pasar la prueba en relación a la accesibilidad visual propuesta en este análisis. La problemática radica en el color del fondo utilizado, ya que pertenece a la misma gama de colores elegidos para los botones de nuestra aplicación. En cambio, esta problemática no se presenta  en los textos, ya que al realizar la misma prueba, estos al ser blancos generan el suficiente contraste con el fondo donde se aplican, aprobando el testeo de forma satisfactoria.
+
+
+\subsection{Accesibilidad para personas con discapacidades cognitivas:}
+A partir del conocimiento general del buen uso y aplicación de softwares y aplicaciones para todas las personas, se puede llegar a las siguientes conclusiones del uso del programa para personas con discapacidades cognitivas: 
+Las interfaces gráficas de la aplicación fueron diseñadas en función de una lectoescritura sencilla, considerando el amplio espectro de procesamiento cognitivo de los diferentes usuarios, incluyendo aquellos con capacidades cognitivas que estén familiarizados con un uso básico de una computadora. Sin embargo, existen procesos en este software que requieren de un proceso de creación poco intuitivo para el usuario: como por ejemplo, el etiquetado previo de una imagen para poder confeccionar un collage de imágenes. Si bien no se trata de un proceso complejo de manera aislada, se considera que la realización de etiquetado de la imagen previo a visualizar el producto final (en este caso el collage de imágenes), puede confundir al usuario que requiere de la tangibilidad sensorial para nombrar un producto final. Se considera para un futuro producto, aclarar previamente en la interfaz, la necesidad de nombrar y/o etiquetar las imágenes para generar el collage.
+- En relación a la lectoescritura, los textos que se presentan en las ventanas de ayuda del programa se consideran extensos. Como evaluación final de la aplicación esta información podría desarrollarse de manera más concisa ya que desarrollan la función de cada botón y no resuelven eventuales problemáticas. En el mismo marco del análisis de la lectoescritura de la aplicación, el dialecto utilizado para redactar las explicaciones de esta misma, se considera en general, que es lo suficientemente concisa y de carácter fluido, en pos de evitar errores al proceso de comprensión, evitando palabras complejas que posibiliten la falta de entendimiento de las ventanas emergentes.
+- En cuanto a la composición visual de las interfaces, distribución de botones y la estructura general en el armado de los layout resultaron satisfactorios en su objetivo. De todas formas, a raíz de un análisis compositivo visual, se podrían haber establecido ciertas normas generales para las interfaces que fuesen aplicables a todas las ventanas. Un ejemplo claro de la sistematización de la composición visual entre interfaces sería el botón “volver” o de retornar a la página anterior. Dicho botón se implementó en casi todas las ventanas del programa, exceptuando en la pantalla de inicio de la aplicación, en su lugar se encuentra la seleccionamos del perfil que queremos utilizar. En las sucesivas pantallas a la de inicio se dispone el botón de volver en diferentes ubicaciones de la pantalla, encontrándose en el margen superior izquierdo en la pantalla de main, en el margen superior derecho para las ventanas: Etiquetar imágenes, Generar collage, Crear/modificar perfil, configuraciones, elegir y editar meme. Y por último, en el margen inferior derecho para las pantallas de: Elegir patrón de diseño (collage), las ventanas de ayuda, quienes somos, cómo funciona la aplicación e información de las ventanas.
+De esta forma se da el resultado que el botón volver atrás se presentó en las 14 ventanas que componen la aplicación de la siguiente manera: 
+Margen superior derecho: 7 veces 	(50% )
+ 	Margen superior izquierdo: 1 veces 	(7% )
+ 	Margen inferior derecho: 5 veces 	(35,7% )
+	Nota: La ventana de inicio no cuenta con botón de volver atrás.
+Esto demuestra que se realizó un criterio poco uniforme al momento de la creación de las diferentes interfaces, siendo así una variación en el diseño de los layouts, dependiendo la misma del integrante del grupo que creó las cada interfaz de la aplicación. Generando así una complejidad en la búsqueda del botón volver al cambiar de posición en cada interfaz.
+En conclusión, se considera que la aplicación creada puede ser utilizada por personas con discapacidades visuales o quienes presenten dificultades o discapacidades cognitivas. Teniendo en cuenta que tras el análisis dentro del espectro de la discapacidad visual y el espectro de las discapacidades cognitivas que pueden presentar los usuarios,  se presentan problemáticas de construcción dentro de la aplicación a mejorar en su diseño y constitución general de la aplicación, no presentan dificultades que imposibiliten el uso total de la aplicación para los diferentes usuarios de la misma.
+
+\section{Referencias}
+[1] 	Integrantes del grupo: Alvarez Ayrton (estudiante de Analista programador Universitario), Bruschi Tomas (estudiante de 	Licenciatura en Informatica) y Percara Francisco (estudiante de 	Licenciatura en Informatica), Massera, Felipe (estudiante de 	Tecnicatura ATIC).
+[2]	Chromatic Vision Simulator o CVS . https://asada.website/webCVS/index.html
+[3] 	Color Contrast Analyser o CCA. https://www.tpgi.com/color-contrast-checker/
+
+\end{document}

@@ -1,0 +1,26 @@
+link drive
+https://drive.google.com/drive/folders/1LCCFXKjFxyHWTiYkZ3SZk2-8wMu85U_Q?usp=sharing
+
+MAIN.PY
+
+1- PARAMETROS obligatorios 1 y opcionales N
+2- LA funcion retorna un DICCIONARIO con la cantidad de apariciones de los nombres pasados por parametros
+3- Variable reader: es un  csv.reader. hacemos la conversion a lista para que sea un objeto iterable,
+ ya que sino el reader una vez iterado hay que resetearlo para volverlo a usar, durante el uso de 
+esta variable debemos tener el archivo abierto. No es necesario realizar la conversion sin embargo
+es algo util ya que evita tener que tener el archivo abierto durante la ejecucion del programa,
+nos posibilita usar indices, es mas rapido que el csvreader,
+
+
+EJECUTAR EL CODIGO
+1- mostrar el uso de series y dataframe
+2- la manera de obtener info sobre dataset es usando la funcion .info()
+3- pandas es mas eficiente para el manejo de grandes cantidades de info, 
+y a su ves nos evita tener que preocuparte por si el archivo esta abierto o cerrado, ya q nos devuelve 
+un data frame, no hace falta castear a lista.
+
+GPT
+main/py corrigio 2 saltos de linea arriba y abajo de las funciones, lineas con espacios blancos,
+doble separacion  == s ], falta la linea en blanco por debajo del print
+entre otros
+	
